@@ -18,7 +18,7 @@ f = prod(10:-1:1);  % Equivalently, 'f = prod(1:10)'
 
 A = zeros(2, 4);  % Creates a 2x4 matrix of only zeros. 'A = [0 0 0 0; 0 0 0 0]'
 A(1, 1) = 1;      % Sets the element at (1, 1) to 1
-A(2, 3) = 1;      % Set the element at (2, 3) to 1
+A(2, 3) = 1;      % Sets the element at (2, 3) to 1
 
 B = [1:2:15, 2:2:16];
 B = reshape(B, 4, 4);
