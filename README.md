@@ -2,7 +2,7 @@
 
 ## Course Overview
 
-This repository contains coursework from *ECE210: MATLAB Seminar* taught by [Jacob Koziej](https://github.com/jacobkoziej) during the Spring 2025 semester at **The Cooper Union**. The course introduces MATLAB from a signal-processing perspective. 
+This repository contains coursework from *ECE210: MATLAB Seminar* taught by [Jacob Koziej](https://github.com/jacobkoziej) during the Spring 2025 semester at **The Cooper Union**. This course introduces MATLAB from a signal-processing perspective. 
 
 Assignments and lessons can be found [here](https://github.com/jacobkoziej/jk-ece210/tree/build/assignments).
 
