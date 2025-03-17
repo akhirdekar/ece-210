@@ -11,9 +11,9 @@ clc;
 %   a_n = 2n + 1,
 %   s(t) = sum_{n=0 to i} [sin(a_n * t) / a_n], for t in [-π, π].
 
-numTerms = 50;            % Number of terms in the sum
-nValues = 0:numTerms;     % Index set from 0 to 50
-aVec = 2 * nValues + 1;   % Generate a_n = 2n + 1
+numTerms = 50;                     % Number of terms in the sum
+nValues = 0:numTerms;              % Index set from 0 to 50
+aVec = 2 * nValues + 1;            % Generate a_n = 2n + 1
 
 tPoints = linspace(-pi, pi, 1000);  % 1000 points from -π to π
 % Create a matrix of sine components, each row is sin(a_n * tPoints) / a_n
@@ -25,8 +25,18 @@ squareApprox = sum(allTerms, 1);
 
 figure('Name','Square Wave Approximation'); 
 hold on;
+
+% Plot the summed approximation, give it a legend entry
 plot(tPoints, squareApprox, 'LineWidth', 1.5, 'DisplayName','Approximation');
-plot(tPoints, allTerms, 'DisplayName','Sine Components');
+
+% Plot all sine components but hide them from the legend
+hAll = plot(tPoints, allTerms, 'Color',[0.6 0.6 0.6]);
+set(hAll, 'HandleVisibility','off');
+
+% Add one representative line for "Sine Components" in the legend
+plot(tPoints, allTerms(1,:), 'LineWidth', 0.8, 'Color','k', ...
+     'DisplayName','Sine Components');
+
 title('Fourier Series Approximation of a Square Wave');
 xlabel('t');
 ylabel('Amplitude');
@@ -100,7 +110,7 @@ colorbar;
 
 
 %% Extra: Plot the MATLAB Logo
-% The MATLAB function "membrane" reproduces a surface resembling the MATLAB logo
+% MATLAB function "membrane" reproduces a surface resembling the MATLAB logo. 
 
 figure('Name','MATLAB Logo');
 logoData = membrane(1, 25);   % Generate a membrane-based surface
